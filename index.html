@@ -36,7 +36,7 @@
         z-index: 1;
         transform: translate(-50%, -50%);
         object-fit: cover; /* 비디오가 잘리는 대신 비율을 유지하며 전체를 채우도록 설정 */
-        filter: blur(7px);
+        filter: blur(3px);
       }
 
       .test {
@@ -100,39 +100,57 @@
         padding-left: 30px;
       }
       h1 {
-        font-size: calc(2vw + 2vh + 1vmin);
+        font-size: calc(4vw + 4vh + 4vmin);
         margin-bottom: 1rem;
       }
       p {
         font-size: 0.8rem;
       }
 
-      h1,
-      p {
-        opacity: 0;
-        transform: translateY(20px);
-        animation: fadeInUp 1s ease-out forwards;
-      }
-
       h1 {
-        /* color: #38b9b0; */
+        display: flex;
+        flex-wrap: wrap;
+        font-weight: 900;
+        font-size: calc(2.7vw + 2.7vh + 1vmin);
+        margin-bottom: 1rem;
         background: linear-gradient(
           146deg,
           rgb(22, 79, 250) 10%,
           rgb(9, 252, 236) 50%
         );
-        font-weight: 900;
-
         -webkit-background-clip: text;
         color: transparent;
-        font-size: calc(2vw + 2vh + 1vmin);
-        margin-bottom: 1rem;
-        animation-delay: 0.2s; /* h1 애니메이션 딜레이 */
       }
 
+      .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 1s ease-in-out forwards;
+        animation-delay: var(--delay); /* Use the custom delay value */
+      }
+      .fade-in2 {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 1s ease-in-out forwards;
+        animation-delay: var(--delay); /* Use the custom delay value */
+      }
+
+      /* 애니메이션 정의 */
+      @keyframes slideUp {
+        from {
+          transform: translateY(30px); /* 시작 위치는 아래에서 30px */
+          opacity: 0; /* 애니메이션 시작 시 투명 */
+        }
+        to {
+          transform: translateY(0); /* 끝 위치는 원래 위치 */
+          opacity: 1; /* 애니메이션 끝에는 불투명 */
+        }
+      }
+
+      /* 애니메이션 적용 */
       p {
-        font-size: 0.8rem;
-        animation-delay: 0.4s; /* p 애니메이션 딜레이 */
+        font-size: 1.1rem;
+        animation: slideUp 2s ease-out; /* 애니메이션 이름, 지속시간, 타이밍 함수 */
       }
 
       @keyframes fadeInUp {
@@ -171,10 +189,14 @@
         </header>
         <div class="titleWrapper">
           <div class="titleContainer">
-            <div>
-              <h1>Reliable Research & Safe Society</h1>
-            </div>
-            <p>
+            <h1>
+              <span class="fade-in" style="--delay: 0s">Reliable Research</span>
+              &nbsp
+              <span class="fade-in" style="--delay: 0.6s">&</span>
+              &nbsp
+              <span class="fade-in" style="--delay: 0.9s">Safe Society</span>
+            </h1>
+            <p class="fade-in2" style="--delay: 0.6s">
               아이디셀포렌식스는 바이오포렌시기 기술을 기반으로 첨단바이오의약품
               품질 관리와 민간 과학수사 서비스를 통한 정의로운 사회구현에
               기여합니다.
