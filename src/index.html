@@ -11,54 +11,131 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./hero-style.css" name="hero" />
+    <link rel="stylesheet" href="./services-style.css" name="services" />
   </head>
   <body>
-    <section class="home">
-      <video autoplay muted loop playsinline class="home-video">
-        <source src="/video/dna-video.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+    <section class="main">
+      <section class="hero">
+        <video autoplay muted loop playsinline class="hero-video">
+          <source src="/video/dna-video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
 
-      <div class="container">
-        <header>
-          <img
-            src="/images/logo.png"
-            class=""
-            alt=""
-            width="195px"
-            height="55px"
-          />
-          <div class="header">
-            <a href="./index.html">Home</a>
-            <a href="./about-us/index.html">About US</a>
-            <a href="">Service</a>
-            <a href="">Request</a>
-            <a href="">Contact</a>
-            <span class="localizeHrefs">
-              <a href="">English</a>
-              <i class="fa-solid fa-chevron-down"></i>
-            </span>
-          </div>
-        </header>
+        <div class="container">
+          <header>
+            <img
+              src="/images/logo.png"
+              class=""
+              alt=""
+              width="195px"
+              height="55px"
+            />
+            <div class="header">
+              <!-- Home 메뉴 -->
+              <a href="./index.html">Home</a>
 
-        <div class="titleWrapper">
-          <div class="titleContainer">
-            <h1 class="title">
-              <span class="fade-in" style="--delay: 0s">Reliable Research</span>
-              &nbsp
-              <span class="fade-in" style="--delay: 0.6s">&</span>
-              &nbsp
-              <span class="fade-in" style="--delay: 0.9s">Safe Society</span>
-            </h1>
-            <p class="sub-title fade-in2" style="--delay: 0.6s">
-              아이디셀포렌식스는 바이오포렌시기 기술을 기반으로 첨단바이오의약품
-              품질 관리와 민간 과학수사 서비스를 통한 정의로운 사회구현에
-              기여합니다.
-            </p>
+              <!-- About Us 메뉴 -->
+              <div class="dropdown about-us-dropdown">
+                <a href="#" class="dropbtn">About Us</a>
+                <div class="dropdown-content">
+                  <!-- About Us 관련 링크들 -->
+                  <a href="./about-us/index.html">Company</a>
+                  <a href="./about-us/team.html">Team</a>
+                </div>
+              </div>
+
+              <!-- Service 메뉴 -->
+              <div class="dropdown service-dropdown">
+                <a href="#" class="dropbtn">Service</a>
+                <div class="dropdown-content">
+                  <a href="#">Custom Oligo</a>
+                  <a href="#">Product</a>
+                </div>
+              </div>
+
+              <!-- Request 메뉴 -->
+              <div class="dropdown request-dropdown">
+                <a href="#" class="dropbtn">Request</a>
+                <div class="dropdown-content">
+                  <!-- Request 관련 링크 -->
+                  <a href="#">Request Link 1</a>
+                  <a href="#">Request Link 2</a>
+                </div>
+              </div>
+
+              <!-- Contact 메뉴 -->
+              <div class="dropdown contact-dropdown">
+                <a href="#" class="dropbtn">Contact</a>
+                <div class="dropdown-content">
+                  <!-- Contact 관련 링크들 -->
+                  <a href="./contact/index.html">General Inquiry</a>
+                  <a href="./contact/support.html">Support</a>
+                </div>
+              </div>
+
+              <!-- localizeHrefs 메뉴 -->
+              <div class="dropdown localize-dropdown">
+                <a href="#" class="dropbtn">English</a>
+                <i class="fa-solid fa-chevron-down"></i>
+                <div class="dropdown-content">
+                  <!-- 언어 선택 링크들 -->
+                  <a href="#">English</a>
+                  <a href="#">Korea</a>
+                  <!-- 추가 언어 링크 -->
+                </div>
+              </div>
+            </div>
+          </header>
+
+          <div class="titleWrapper">
+            <div class="titleContainer">
+              <h1 class="title">
+                <span class="fade-in" style="--delay: 0s"
+                  >Reliable Research</span
+                >
+                &nbsp
+                <span class="fade-in" style="--delay: 0.6s">&</span>
+                &nbsp
+                <span class="fade-in" style="--delay: 0.9s">Safe Society</span>
+              </h1>
+              <p class="sub-title fade-in2" style="--delay: 0.6s">
+                아이디셀포렌식스는 바이오포렌시기 기술을 기반으로
+                첨단바이오의약품 품질 관리와 민간 과학수사 서비스를 통한
+                정의로운 사회구현에 기여합니다.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
+
+      <section class="services-container">
+        <div class="services-container-title-wrapper">
+          <h1 class="services-container-title">Our Services</h1>
+          <p class="services-container-subtitle">
+            바이오포렌식 기술을 기반으로 신뢰성 높은 연구와 생산활동을 지원하는
+            서비스를 제공합니다.
+          </p>
+        </div>
+        <div class="services">
+          <div class="services-service">
+            <img src="" alt="" class="services-service-icon" />
+            <p>첨단바이오 의약품 세포주 검증 및 오염 확인스</p>
+          </div>
+          <div class="services-service">
+            <img src="" alt="" class="services-service-icon" />
+            <p>민간 과학수사</p>
+          </div>
+          <div class="services-service">
+            <img src="" alt="" class="services-service-icon" />
+            <p>개인 유전체 분석</p>
+          </div>
+          <div class="services-service">
+            <img src="" alt="" class="services-service-icon" />
+            <p>비 인간 DNA 분석</p>
+          </div>
+        </div>
+      </section>
     </section>
   </body>
 </html>

@@ -1,0 +1,38 @@
+.services-container {
+  margin: 100px 30px;
+  text-align: center;
+}
+
+.services-container-title-wrapper {
+  padding-bottom: 30px;
+}
+
+.services-container-title {
+  color: #56e5db;
+}
+
+.services {
+  padding: 20px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.services-title-container {
+}
+
+.services-container-title {
+  padding-bottom: 0.7rem;
+}
+
+.services-service {
+  width: 200px;
+  height: 200px;
+  /* border: 1px solid red; */
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 0.5rem;
+  text-align: center;
+  /* font-weight: bold; */
+}
