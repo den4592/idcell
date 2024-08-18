@@ -1,38 +1,134 @@
+@import url("./common-style.css");
+
 .services-container {
-  margin: 100px 30px;
-  text-align: center;
+  position: relative;
+  height: 100vh; /* 또는 필요한 높이 */
+  padding: 120px 50px;
+  overflow: hidden; /* 스크롤바 숨기기 */
+}
+
+/* Initial state of the title */
+.services-container-title {
+  opacity: 0; /* Initial state: invisible */
+  transform: translateX(50%); /* Start off to the right */
+  transition: opacity 2s ease, transform 2s ease;
+  text-align: left;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+/* State when the element should be visible and in place */
+.fade-in-slide-in {
+  opacity: 1; /* Fully visible */
+  transform: translateX(0); /* In place */
+}
+
+/* Keyframes for animation */
+@keyframes fadeInSlideIn {
+  0% {
+    opacity: 0; /* Fully transparent at the start */
+    transform: translateX(100%); /* Start from the right */
+  }
+  100% {
+    opacity: 1; /* Fully visible at the end */
+    transform: translateX(0); /* End in the normal position */
+  }
 }
 
 .services-container-title-wrapper {
-  padding-bottom: 30px;
+  padding-bottom: 50px;
 }
 
 .services-container-title {
-  color: #56e5db;
+  color: var(--powder-blue);
+  font-size: calc(2.3vw + 2.3vh + 1vmin);
 }
 
-.services {
-  padding: 20px 50px;
+.services-container-subtitle {
+  font-size: calc(0.5vw + 0.5vh + 1vmin);
+}
+
+.services-wrapper {
+  height: 50vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
+}
+
+.services {
+  margin-top: 50px;
+  padding: 20px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
 }
 
 .services-title-container {
 }
 
-.services-container-title {
-  padding-bottom: 0.7rem;
-}
-
 .services-service {
-  width: 200px;
-  height: 200px;
-  /* border: 1px solid red; */
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  width: 250px;
+  height: 300px;
+  width: 100%;
+  height: 100%;
   border-radius: 0.5rem;
   text-align: center;
-  /* font-weight: bold; */
+  position: relative;
+  list-style: none;
+}
+
+.services-service p {
+  min-width: 200px;
+  white-space: nowrap;
+  padding: 1rem 0;
+  border-bottom: 1px solid black;
+  font-size: calc(0.5vw + 0.5vh + 1vmin);
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.services-service img {
+  width: 40%;
+  height: 40%;
+}
+
+.services-service-sub span {
+  white-space: nowrap;
+  display: block;
+  font-size: calc(0.5vw + 0.5vh + 1vmin);
+}
+
+@media screen and (max-width: 1000px) {
+  .services {
+    flex-wrap: wrap;
+  }
+  .services-wrapper {
+    margin-top: 2rem;
+  }
+  .services-service {
+    width: 30%;
+    height: 30%;
+    min-width: 100px;
+    min-height: 100px;
+  }
+  .services-service p {
+    min-width: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .services-service {
+    width: 40%;
+    height: 40%;
+    min-width: 0;
+    min-height: 0;
+  }
+}
+
+/* 1024px 이상일 때 */
+@media (min-width: 1024px) {
+  .services {
+    margin: 0 auto;
+  }
 }

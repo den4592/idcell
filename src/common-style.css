@@ -1,0 +1,17 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Arial", "Nexon Gothic", "Apple SD Gothic Neo", "Malgun Gothic",
+    "Nanum Gothic", "Noto Sans", "sans-serif";
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-blue: rgb(41, 85, 211);
+  --primary-mint: rgb(87, 229, 219);
+
+  --black: rgb(18, 0, 42);
+  --powder-blue: rgb(27, 167, 225);
+  --midnight-blue: rgb(39, 52, 118);
+  --forest-green: rgb(127, 213, 189);
+}
