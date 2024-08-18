@@ -11,186 +11,47 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <style>
-      * {
-        padding: 0;
-        margin: 0;
-        font-family: "Arial", "Nexon Gothic", "Apple SD Gothic Neo",
-          "Malgun Gothic", "Nanum Gothic", "Noto Sans", "sans-serif";
-      }
-      .bg-test {
-        width: 100%;
-        height: 100vh;
-        position: relative;
-        overflow: hidden;
-      }
-
-      .bg-video {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        min-width: 100%;
-        min-height: 100%;
-        width: auto;
-        height: auto;
-        z-index: 1;
-        transform: translate(-50%, -50%);
-        object-fit: cover; /* 비디오가 잘리는 대신 비율을 유지하며 전체를 채우도록 설정 */
-        filter: blur(3px);
-      }
-
-      .test {
-        position: relative;
-        z-index: 2;
-        color: #fff;
-      }
-
-      header {
-        height: auto;
-        display: flex;
-        justify-content: space-between;
-        padding-left: 30px;
-        padding-right: 30px;
-      }
-      .header {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 30px;
-      }
-
-      .header > a {
-        color: #fff;
-        text-decoration: none;
-        text-align: center;
-        white-space: nowrap;
-      }
-
-      .header > a:hover {
-        color: rgb(22, 79, 250);
-        transition: 0.2s;
-      }
-
-      .enkr > a,
-      .enkr > i {
-        color: #fff;
-        text-decoration: none;
-      }
-
-      .enkr:hover a,
-      .enkr:hover i {
-        cursor: pointer;
-        color: rgb(22, 79, 250);
-        transition: 0.2s;
-      }
-
-      img {
-        padding: 10px 0;
-      }
-
-      .titleWrapper {
-        width: 100%;
-        height: 80vh;
-        display: flex;
-        align-items: center;
-      }
-      .titleContainer {
-        color: #fff;
-        padding-left: 30px;
-      }
-      h1 {
-        font-size: calc(4vw + 4vh + 4vmin);
-        margin-bottom: 1rem;
-      }
-      p {
-        font-size: 0.8rem;
-      }
-
-      h1 {
-        display: flex;
-        flex-wrap: wrap;
-        font-weight: 900;
-        font-size: calc(2.7vw + 2.7vh + 1vmin);
-        margin-bottom: 1rem;
-      }
-
-      h1 > span {
-        background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-
-      .fade-in {
-        opacity: 0;
-        transform: translateY(20px);
-        animation: fadeInUp 1s ease-in-out forwards;
-        animation-delay: var(--delay); /* Use the custom delay value */
-      }
-      .fade-in2 {
-        opacity: 0;
-        transform: translateY(20px);
-        animation: fadeInUp 1s ease-in-out forwards;
-        animation-delay: var(--delay); /* Use the custom delay value */
-      }
-
-      /* 애니메이션 정의 */
-      @keyframes slideUp {
-        from {
-          transform: translateY(30px); /* 시작 위치는 아래에서 30px */
-          opacity: 0; /* 애니메이션 시작 시 투명 */
-        }
-        to {
-          transform: translateY(0); /* 끝 위치는 원래 위치 */
-          opacity: 1; /* 애니메이션 끝에는 불투명 */
-        }
-      }
-
-      /* 애니메이션 적용 */
-      p {
-        font-size: 1.1rem;
-        animation: slideUp 2s ease-out; /* 애니메이션 이름, 지속시간, 타이밍 함수 */
-      }
-
-      @keyframes fadeInUp {
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <div class="bg-test">
-      <video autoplay muted loop playsinline class="bg-video">
+    <section class="home">
+      <video autoplay muted loop playsinline class="home-video">
         <source src="/video/dna-video.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-      <div class="test">
+
+      <div class="container">
         <header>
-          <img src="/images/logo.png" alt="" width="250px" height="75px" />
+          <img
+            src="/images/logo.png"
+            class=""
+            alt=""
+            width="195px"
+            height="55px"
+          />
           <div class="header">
             <a href="./index.html">Home</a>
-            <a href="">About US</a>
+            <a href="./about-us/index.html">About US</a>
             <a href="">Service</a>
             <a href="">Request</a>
             <a href="">Contact</a>
-            <span class="enkr">
+            <span class="localizeHrefs">
               <a href="">English</a>
               <i class="fa-solid fa-chevron-down"></i>
             </span>
           </div>
         </header>
+
         <div class="titleWrapper">
           <div class="titleContainer">
-            <h1>
+            <h1 class="title">
               <span class="fade-in" style="--delay: 0s">Reliable Research</span>
               &nbsp
               <span class="fade-in" style="--delay: 0.6s">&</span>
               &nbsp
               <span class="fade-in" style="--delay: 0.9s">Safe Society</span>
             </h1>
-            <p class="fade-in2" style="--delay: 0.6s">
+            <p class="sub-title fade-in2" style="--delay: 0.6s">
               아이디셀포렌식스는 바이오포렌시기 기술을 기반으로 첨단바이오의약품
               품질 관리와 민간 과학수사 서비스를 통한 정의로운 사회구현에
               기여합니다.
@@ -198,6 +59,6 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
   </body>
 </html>
