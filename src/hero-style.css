@@ -29,21 +29,30 @@
 /** 헤더 **/
 header {
   width: 100%;
-  height: auto;
   display: flex;
   justify-content: space-between;
-  padding: 20px 50px;
+  align-items: center;
   position: fixed;
   background-color: transparent; /* 기본 상태는 투명 */
   transition: background-color 0.3s ease; /* 배경색 변경에 애니메이션 추가 */
   z-index: 1000;
+  padding: 20px 0;
+}
+
+.header-wrapper {
+  width: 100%;
+  padding: 0 50px;
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
 }
 
 .header {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 80px;
+  gap: 60px;
+  white-space: nowrap;
 }
 
 .header > a {
@@ -136,10 +145,10 @@ header {
   height: 100vh;
   display: flex;
   align-items: center;
+  padding: 0 50px;
 }
 .titleContainer {
   color: #fff;
-  padding-left: 50px;
 }
 
 .title {
