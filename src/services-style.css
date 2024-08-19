@@ -56,12 +56,12 @@
 }
 
 .services {
-  margin-top: 50px;
-  padding: 20px 30px;
+  padding: 20px;
   display: flex;
-  align-items: center;
   justify-content: center;
-  gap: 50px;
+  gap: 30px;
+  width: 100%;
+  min-width: 300px;
 }
 
 .services-title-container {
@@ -107,8 +107,8 @@
     margin-top: 2rem;
   }
   .services-service {
-    width: 30%;
-    height: 30%;
+    width: 35%;
+    height: 35%;
     min-width: 100px;
     min-height: 100px;
   }
@@ -119,10 +119,19 @@
 
 @media screen and (max-width: 768px) {
   .services-service {
-    width: 40%;
-    height: 40%;
-    min-width: 0;
-    min-height: 0;
+    width: 45%;
+    height: 45%;
+    min-width: 50px;
+    min-height: 50px;
+  }
+}
+
+@media screen and (max-width: 555px) {
+  .services-service {
+    width: 42%;
+    height: 42%;
+    min-width: 100px;
+    min-height: 100px;
   }
 }
 
